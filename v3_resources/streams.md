@@ -23,7 +23,11 @@ Returns a stream object if live.
 curl -H 'Accept: application/vnd.twitchtv.v3+json' \
 -X GET https://api.twitch.tv/kraken/streams/test_channel
 ```
-
+```powershell
+$myheader = @{"Accept"="application/vnd.twitchtv.v3+json";}
+$result =irm -header $myheader -method get -uri "https://api.twitch.tv/kraken/streams/"
+$result
+```
 ### Example Response
 
 #### If offline
